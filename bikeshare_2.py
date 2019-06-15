@@ -258,27 +258,31 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        #check whether df contains data
+        if len(df) !> 0: 
+            print("\nSorry, no data available for your criteria.") 
+        else:
+            time_stats(df)
+            station_stats(df)
+            trip_duration_stats(df)
+            user_stats(df)
 
-        #Display sample raw data upon user request, continue until user denies
-        input_ok = 0
-        input_status = 1
-        while not input_ok == 1:
-            # Depending on the number of iterations use different wording
-            if input_status == 1:
-                raw_input = input('\nWould you like to see some raw data? Enter yes or no.\n').lower()
-                input_status = 2
-            else:   
-               raw_input = input('\nWould you like to see further raw data? Enter yes or no.\n').lower() 
-               
-            if raw_input == 'yes':
-                # show raw data
-                raw_data(df)
-            else:
-                input_ok = 1
+            #Display sample raw data upon user request, continue until user denies
+            input_ok = 0
+            input_status = 1
+            while not input_ok == 1:
+                # Depending on the number of iterations use different wording
+                if input_status == 1:
+                    raw_input = input('\nWould you like to see some raw data? Enter yes or no.\n').lower()
+                    input_status = 2
+                else:   
+                   raw_input = input('\nWould you like to see further raw data? Enter yes or no.\n').lower() 
+                   
+                if raw_input == 'yes':
+                    # show raw data
+                    raw_data(df)
+                else:
+                    input_ok = 1
 
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
