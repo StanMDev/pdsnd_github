@@ -5,7 +5,8 @@
 Bikeshare data analysis
 
 ### Description
-Describe what your project is about and what it does
+This project is to learn data manipulation and analysis with python.
+It is part of a course at Udacity.
 
 ### Files used
 Include the files used
