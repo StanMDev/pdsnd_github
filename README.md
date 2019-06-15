@@ -1,5 +1,5 @@
 ### Date created
-Include the date you created this project and README file.
+15 June 2019 by Stefan Michel
 
 ### Project Title
 Replace the Project Title
