@@ -283,6 +283,7 @@ def main():
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
+            print("\nThank you for your interest in bike sharing data.") 
             break
         else:
             #clean sreen for new start
